@@ -159,11 +159,12 @@ function HeroSection() {
 
 function ProgramSection() {
   const events = [
-    { time: '12:30', icon: '🌸', title: 'Сбор гостей', desc: 'Встречаем гостей, лёгкие угощения и фотосессия' },
     { time: '13:00', icon: '💍', title: 'Регистрация брака', desc: 'Торжественная церемония бракосочетания' },
-    { time: '14:00', icon: '📸', title: 'Фотосессия', desc: 'Прогулка и памятные снимки с молодожёнами' },
-    { time: '15:30', icon: '🍽', title: 'Начало банкета', desc: 'Праздничный ужин, тосты, музыка и танцы' },
-    { time: 'До утра', icon: '✨', title: 'Веселье', desc: 'Слёзы радости, море улыбок и минимум неловких тостов (но это не точно)' },
+    { time: '13:30', icon: '📸', title: 'Фотосессия', desc: 'Прогулка и памятные снимки с молодожёнами' },
+    { time: '15:00', icon: '🌸', title: 'Сбор гостей', desc: 'Встречаем гостей у банкетного зала, лёгкий фуршет' },
+    { time: '15:30', icon: '💃', title: 'Репетиция встречи молодых', desc: 'Подготовка к торжественной встрече молодожёнов' },
+    { time: '16:00', icon: '🍽', title: 'Начало банкета', desc: 'Праздничный ужин, тосты, музыка и танцы' },
+    { time: 'До 23:00', icon: '✨', title: 'Веселье', desc: 'Слёзы радости, море улыбок и минимум неловких тостов (но это не точно)' },
   ];
 
   return (
@@ -277,7 +278,7 @@ function RSVPSection() {
               <textarea
                 value={comment}
                 onChange={e => setComment(e.target.value)}
-                placeholder="Диетические предпочтения, особые пожелания..."
+                placeholder="Предпочтения по алкоголю: шампанское, красное вино, белое вино, коньяк и т.д."
                 rows={3}
                 className="border border-[var(--wedding-rose)]/30 bg-transparent px-4 py-3 font-montserrat text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[var(--wedding-rose)] transition-colors rounded-sm resize-none"
               />
@@ -319,26 +320,38 @@ function ContactsSection() {
 
           <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
             <div className="flex flex-col items-center gap-2 p-6 border border-[var(--wedding-rose)]/20 rounded">
-              <span className="text-2xl">💌</span>
-              <p className="font-montserrat text-xs tracking-widest uppercase text-[var(--wedding-taupe)]">Организатор</p>
+              <span className="text-2xl">👰</span>
+              <p className="font-montserrat text-xs tracking-widest uppercase text-[var(--wedding-taupe)]">Невеста</p>
               <a
-                href="tel:+79001234567"
+                href="tel:+79537916923"
                 className="font-cormorant text-xl italic text-[var(--wedding-rose)] hover:text-[var(--wedding-taupe)] transition-colors"
               >
-                +7 (900) 123-45-67
+                +7 (953) 791-69-23
               </a>
-              <p className="font-montserrat text-xs text-muted-foreground">Алина — свадебный организатор</p>
+              <p className="font-montserrat text-xs text-muted-foreground">Кристина</p>
+              <a
+                href="https://t.me/kristina_pkm"
+                className="font-montserrat text-xs text-[var(--wedding-rose)] hover:text-[var(--wedding-taupe)] transition-colors"
+              >
+                @kristina_pkm
+              </a>
             </div>
             <div className="flex flex-col items-center gap-2 p-6 border border-[var(--wedding-rose)]/20 rounded">
-              <span className="text-2xl">💬</span>
-              <p className="font-montserrat text-xs tracking-widest uppercase text-[var(--wedding-taupe)]">Написать</p>
+              <span className="text-2xl">🤵</span>
+              <p className="font-montserrat text-xs tracking-widest uppercase text-[var(--wedding-taupe)]">Жених</p>
               <a
-                href="https://t.me/username"
+                href="tel:+79529004125"
                 className="font-cormorant text-xl italic text-[var(--wedding-rose)] hover:text-[var(--wedding-taupe)] transition-colors"
               >
-                @username
+                +7 (952) 900-41-25
               </a>
-              <p className="font-montserrat text-xs text-muted-foreground">Telegram</p>
+              <p className="font-montserrat text-xs text-muted-foreground">Кирилл</p>
+              <a
+                href="https://t.me/ROST_TMT"
+                className="font-montserrat text-xs text-[var(--wedding-rose)] hover:text-[var(--wedding-taupe)] transition-colors"
+              >
+                @ROST_TMT
+              </a>
             </div>
           </div>
         </div>
