@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 
-const HERO_IMAGE = 'https://cdn.poehali.dev/projects/140881a4-8e91-4ec5-815e-15487a91c2d1/files/b17d27f6-e66c-4222-b836-b08cf26f076b.jpg';
+const HERO_IMAGE = 'https://cdn.poehali.dev/projects/140881a4-8e91-4ec5-815e-15487a91c2d1/files/8bab7bfa-0460-4033-b6f0-df7844e73ced.jpg';
 const WEDDING_DATE = new Date('2026-07-25T13:00:00');
 const RSVP_DEADLINE = '01.05.2026';
 
