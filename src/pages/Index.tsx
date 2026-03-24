@@ -210,8 +210,17 @@ function RSVPSection() {
   const [comment, setComment] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      await fetch('https://functions.poehali.dev/27266cb6-395f-42bf-aef0-30f928ab37d4', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, guests, comment }),
+      });
+    } catch (_) {
+      // уведомления отправлены в фоне, показываем успех в любом случае
+    }
     setSubmitted(true);
   };
 
@@ -299,10 +308,8 @@ function RSVPSection() {
 
 function ContactsSection() {
   const faq = [
-    { q: 'Дресс-код?', a: 'Приветствуется нарядная одежда в пастельных и нейтральных тонах. Пожалуйста, избегайте белого цвета.' },
-    { q: 'Где будет проходить торжество?', a: 'Адрес и схема проезда будут отправлены каждому гостю дополнительно.' },
-    { q: 'Можно ли взять детей?', a: 'Мы с радостью примем маленьких гостей — пожалуйста, укажите их в форме подтверждения.' },
-    { q: 'Нужен ли подарок?', a: 'Ваше присутствие — лучший подарок для нас. Но если хотите порадовать — спросите у организаторов.' },
+    { q: 'Дресс-код?', a: 'Мы не настаиваем на конкретной цветовой палитре, но будем очень признательны, если ваши наряды будут в нежных пастельных тонах.' },
+    { q: 'Где будет проходить торжество?', a: 'Банкетный зал "Адмирал" по адресу ул. Ленинская, 12.' },
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
