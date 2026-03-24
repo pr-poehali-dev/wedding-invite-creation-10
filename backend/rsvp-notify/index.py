@@ -90,12 +90,16 @@ def handler(event: dict, context) -> dict:
     errors = []
     try:
         send_email(name, guests, comment)
+        print("EMAIL OK")
     except Exception as e:
+        print(f"EMAIL ERROR: {e}")
         errors.append(f"email: {e}")
 
     try:
         send_telegram(name, guests, comment)
+        print("TELEGRAM OK")
     except Exception as e:
+        print(f"TELEGRAM ERROR: {e}")
         errors.append(f"telegram: {e}")
 
     return {
