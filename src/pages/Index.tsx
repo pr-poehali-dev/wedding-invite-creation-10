@@ -118,8 +118,11 @@ function HeroSection() {
           <span className="font-cormorant text-lg italic text-[var(--wedding-rose)]">самый счастливый день</span>
         </div>
 
-        <p className="animate-fade-up-delay-3 font-cormorant text-2xl md:text-3xl text-[var(--wedding-taupe)] mb-12 font-light">
+        <p className="animate-fade-up-delay-3 font-cormorant text-2xl md:text-3xl text-[var(--wedding-taupe)] font-light">
           25 июля 2026 года
+        </p>
+        <p className="animate-fade-up-delay-3 font-montserrat text-sm text-[var(--wedding-taupe)] mb-12 tracking-wider">
+          Банкетный зал «Адмирал», ул. Ленинская, 12
         </p>
 
         <div className="animate-fade-up-delay-4 grid grid-cols-4 gap-3 md:gap-6 max-w-md mx-auto">
@@ -159,7 +162,7 @@ function HeroSection() {
 
 function ProgramSection() {
   const events = [
-    { time: '13:00', icon: '💍', title: 'Регистрация брака', desc: 'Торжественная церемония бракосочетания' },
+    { time: '13:00', icon: '💍', title: 'Регистрация брака', desc: 'Торжественная церемония бракосочетания в отделе ЗАГС' },
     { time: '13:30', icon: '📸', title: 'Фотосессия', desc: 'Прогулка и памятные снимки с молодожёнами' },
     { time: '15:00', icon: '🌸', title: 'Сбор гостей', desc: 'Встречаем гостей у банкетного зала, лёгкий фуршет' },
     { time: '15:30', icon: '💃', title: 'Репетиция встречи молодых', desc: 'Подготовка к торжественной встрече молодожёнов' },
