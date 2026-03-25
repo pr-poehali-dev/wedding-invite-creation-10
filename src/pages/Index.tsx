@@ -310,13 +310,6 @@ function RSVPSection() {
 }
 
 function ContactsSection() {
-  const faq = [
-    { q: 'Дресс-код?', a: 'Мы не настаиваем на конкретной цветовой палитре, но будем очень признательны, если ваши наряды будут в нежных пастельных тонах.' },
-    { q: 'Где будет проходить торжество?', a: 'Банкетный зал "Адмирал" по адресу ул. Ленинская, 12.' },
-  ];
-
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
-
   return (
     <section id="contacts" className="py-24 px-6 bg-white">
       <div className="max-w-2xl mx-auto">
@@ -366,32 +359,7 @@ function ContactsSection() {
           </div>
         </div>
 
-        <div className="mb-6 text-center">
-          <p className="font-montserrat text-xs tracking-[0.25em] uppercase text-muted-foreground">
-            Часто задаваемые вопросы
-          </p>
-        </div>
 
-        <div className="flex flex-col gap-0 border-t border-[var(--wedding-rose)]/20">
-          {faq.map((item, i) => (
-            <div key={i} className="border-b border-[var(--wedding-rose)]/20">
-              <button
-                onClick={() => setOpenIdx(openIdx === i ? null : i)}
-                className="w-full flex items-center justify-between py-5 text-left gap-4"
-              >
-                <span className="font-cormorant text-xl italic text-[var(--wedding-taupe)]">{item.q}</span>
-                <Icon
-                  name={openIdx === i ? 'ChevronUp' : 'ChevronDown'}
-                  size={16}
-                  className="text-[var(--wedding-rose)] flex-shrink-0"
-                />
-              </button>
-              {openIdx === i && (
-                <p className="font-montserrat text-sm text-muted-foreground pb-5 leading-relaxed">{item.a}</p>
-              )}
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
